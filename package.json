@@ -1,0 +1,41 @@
+{
+	"name": "cra-alternative",
+	"version": "1.0.0",
+	"description": "React-Webpack configuration template",
+	"main": "index.js",
+	"scripts": {
+		"test": "",
+		"build": "webpack build --config ./scripts/webpack.config.prod.ts --stats verbose",
+		"dev": "webpack serve --config ./src/scripts/webpack.config.development.ts --stats verbose",
+		"validate": "webpack configtest"
+	},
+	"keywords": [
+		"React",
+		"Webpack",
+		"CRA"
+	],
+	"author": "Klimenty Kimovich",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/react-dom": "18.0.11",
+		"css-loader": "6.7.3",
+		"esbuild-loader": "3.0.1",
+		"html-webpack-plugin": "5.1.0",
+		"postcss-loader": "7.1.0",
+		"sass-loader": "13.2.2",
+		"style-loader": "3.3.2",
+		"ts-node": "10.9.1",
+		"typescript": "5.0.4",
+		"webpack": "5.76.3",
+		"webpack-cli": "5.0.1",
+		"webpack-dev-server": "4.13.1",
+		"webpack-merge": "5.8.0"
+	},
+	"dependencies": {
+		"@types/html-webpack-plugin": "^3.2.6",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-router": "6.10.0",
+		"react-router-dom": "6.10.0"
+	}
+}
