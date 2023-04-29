@@ -1,6 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Route, Routes } from 'react-router'
+import './style.css'
+
+const Lazy = React.lazy(() => import('./Lazy'))
 
 export const App = () => {
-	const [count, setCount] = useState(0)
-	return <h1 onClick={() => setCount(prev => prev + 1)}>Yay! {count}</h1>
+	return (
+		<Routes>
+			<Route
+				path='/'
+				element={<p>yayayayayayay</p>}
+			/>
+			<Route
+				path='/'
+				element={<Lazy />}
+			/>
+		</Routes>
+	)
 }
