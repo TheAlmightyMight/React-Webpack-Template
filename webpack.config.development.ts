@@ -1,5 +1,6 @@
-import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
 import * as webpack from 'webpack'
+import * as path from 'node:path'
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 const devServer: DevServerConfiguration = {
@@ -62,7 +63,7 @@ export default {
 		new webpack.DefinePlugin({ MODE: JSON.stringify('development') }),
 	],
 	resolve: {
-		extensions: ['.ts', '.tsx', '.js', 'jsx'],
+		extensions: ['.ts', '.tsx', '...'],
 	},
 	watchOptions: {
 		ignored: '**/node_modules',

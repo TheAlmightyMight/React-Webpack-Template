@@ -3,19 +3,24 @@
 	"version": "1.0.0",
 	"description": "React-Webpack configuration template",
 	"main": "index.js",
+	"license": "ISC",
+	"author": "Klimenty Kimovich",
+	"keywords": [
+		"React",
+		"Webpack",
+		"CRA"
+	],
 	"scripts": {
 		"test": "echo 'no test'",
 		"build": "webpack build --config webpack.config.prod.ts",
 		"dev": "webpack serve --config webpack.config.development.ts",
 		"validate": "webpack configtest"
 	},
-	"keywords": [
-		"React",
-		"Webpack",
-		"CRA"
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not op_mini all"
 	],
-	"author": "Klimenty Kimovich",
-	"license": "ISC",
 	"devDependencies": {
 		"@types/html-webpack-plugin": "3.2.6",
 		"@types/react-dom": "18.0.11",

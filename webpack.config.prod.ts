@@ -12,6 +12,12 @@ export default {
 	entry: './src/index.tsx',
 	stats: 'verbose',
 	devtool: false,
+	cache: {
+		type: 'filesystem',
+		name: 'ProdCache',
+		maxAge: 1000 * 60 * 60 * 24 * 2,
+		compression: 'gzip',
+	},
 	performance: {
 		hints: 'warning',
 	},
@@ -45,6 +51,7 @@ export default {
 			favicon: './src/images/React-icon.svg.png',
 			cache: true,
 		}),
+		new webpack.DefinePlugin({ MODE: JSON.stringify('production') }),
 		new webpack.ProgressPlugin(),
 		new MiniCSSExtractPlugin(),
 	],
@@ -55,7 +62,6 @@ export default {
 		clean: false,
 	},
 	resolve: {
-		// alias: [], !!!
 		extensions: ['.tsx', '.ts', '...'],
 	},
 } as webpack.Configuration
