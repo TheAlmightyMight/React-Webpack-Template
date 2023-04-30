@@ -26,12 +26,6 @@ export default {
 
 		splitChunks: {
 			cacheGroups: {
-				styles: {
-					name: 'styles',
-					test: /\.css$/,
-					chunks: 'all',
-					enforce: true,
-				},
 				vendor: {
 					name: 'vendor',
 					test: /[\\/]node_modules[\\/]/,
@@ -75,10 +69,10 @@ export default {
 		new BundleAnalyzerPlugin.BundleAnalyzerPlugin({ openAnalyzer: false }),
 		new WebpackManifestPlugin({ fileName: 'runtime' }),
 		new webpack.ProgressPlugin(),
-		new MiniCSSExtractPlugin(),
+		new MiniCSSExtractPlugin({ filename: '[name].[contenthash].css' }),
 	],
 	output: {
-		filename: '[name].[hash].js',
+		filename: '[name].[contenthash].js',
 		asyncChunks: true,
 		path: path.resolve(__dirname, 'dist'),
 		clean: false,
