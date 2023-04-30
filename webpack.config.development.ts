@@ -1,5 +1,5 @@
 import * as webpack from 'webpack'
-import * as path from 'node:path'
+// import * as path from 'node:path'
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 

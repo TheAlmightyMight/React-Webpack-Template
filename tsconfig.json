@@ -14,11 +14,11 @@
 		"moduleResolution": "nodenext",
 		"baseUrl": "./",
 
-		/* not picking up the declarations*/
+		/* not able to pick up the declarations*/
 
-		"paths": {
-			"utils/*": ["./src/utils/"]
-		},
+		// "paths": {
+		// 	"utils/*": ["./src/utils/"]
+		// },
 
 		"moduleSuffixes": [],
 

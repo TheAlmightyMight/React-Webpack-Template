@@ -3,6 +3,7 @@ import * as path from 'node:path'
 import MiniCSSExtractPlugin from 'mini-css-extract-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CSSminimizer from 'css-minimizer-webpack-plugin'
+import BundleAnalyzerPlugin from 'webpack-bundle-analyzer'
 
 // TODO: add ESLint StyleLint PostCSS Nginx deploy browserslist assets loader / plugin and good caching
 
@@ -52,6 +53,7 @@ export default {
 			cache: true,
 		}),
 		new webpack.DefinePlugin({ MODE: JSON.stringify('production') }),
+		new BundleAnalyzerPlugin.BundleAnalyzerPlugin({ openAnalyzer: false }),
 		new webpack.ProgressPlugin(),
 		new MiniCSSExtractPlugin(),
 	],
