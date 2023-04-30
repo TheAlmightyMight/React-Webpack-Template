@@ -4,4 +4,8 @@ p {
 
 .class {
 	color: green;
+
+	span {
+		color: blue;
+	}
 }

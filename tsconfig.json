@@ -23,7 +23,7 @@
 		"moduleSuffixes": [],
 
 		"allowJs": true,
-		"checkJs": true,
+		"checkJs": false,
 		"maxNodeModuleJsDepth": 0,
 
 		"declaration": false,

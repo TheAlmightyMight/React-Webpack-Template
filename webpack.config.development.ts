@@ -35,6 +35,8 @@ export default {
 	},
 	module: {
 		rules: [
+			// https://webpack.js.org/guides/asset-modules/
+			{ test: /\.svg/, type: 'asset/inline' },
 			{
 				test: /\.css$/,
 				use: [
@@ -43,6 +45,7 @@ export default {
 						loader: 'css-loader',
 						options: { sourceMap: true },
 					},
+					'postcss-loader',
 				],
 			},
 			{
@@ -57,7 +60,7 @@ export default {
 			template: './src/public/index.html',
 			title: 'Webpack template',
 			filename: 'index.html',
-			favicon: './src/images/React-icon.svg.png',
+			favicon: './src/images/React-icon.png',
 			cache: true,
 		}),
 		new webpack.DefinePlugin({ MODE: JSON.stringify('development') }),
