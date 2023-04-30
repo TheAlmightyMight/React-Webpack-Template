@@ -1,11 +1,16 @@
 import * as webpack from 'webpack'
 import * as path from 'node:path'
+import * as glob from 'glob'
 import MiniCSSExtractPlugin from 'mini-css-extract-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CSSminimizer from 'css-minimizer-webpack-plugin'
 import BundleAnalyzerPlugin from 'webpack-bundle-analyzer'
 
 // TODO: add ESLint StyleLint PostCSS Nginx deploy browserslist assets loader / plugin and good caching
+
+const PATHS = {
+	src: path.join(__dirname, 'src'),
+}
 
 export default {
 	mode: 'production',
@@ -24,6 +29,17 @@ export default {
 	},
 	optimization: {
 		minimizer: [new CSSminimizer()],
+
+		splitChunks: {
+			cacheGroups: {
+				styles: {
+					name: 'styles',
+					test: /\.css$/,
+					chunks: 'all',
+					enforce: true,
+				},
+			},
+		},
 	},
 	module: {
 		rules: [
@@ -61,7 +77,7 @@ export default {
 		filename: '[name].[hash].js',
 		assetModuleFilename: '[name][ext]',
 		path: path.resolve(__dirname, 'dist'),
-		clean: false,
+		clean: true,
 	},
 	resolve: {
 		extensions: ['.tsx', '.ts', '...'],

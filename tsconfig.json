@@ -11,7 +11,7 @@
 
 		"module": "ESNext",
 		"rootDir": ".",
-		"moduleResolution": "nodenext",
+		"moduleResolution": "node",
 		"baseUrl": "./",
 
 		/* not able to pick up the declarations*/
@@ -26,7 +26,7 @@
 		"checkJs": true,
 		"maxNodeModuleJsDepth": 0,
 
-		"declaration": true,
+		"declaration": false,
 		"outDir": "./dist",
 		"removeComments": true,
 		"importsNotUsedAsValues": "remove",

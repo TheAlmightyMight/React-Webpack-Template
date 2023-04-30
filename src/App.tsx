@@ -8,6 +8,7 @@ const Lazy = React.lazy(() => import('./Lazy'))
 export const App = () => {
 	return (
 		<Routes>
+			<p>hello</p>
 			<Route
 				path='/'
 				element={<Example />}

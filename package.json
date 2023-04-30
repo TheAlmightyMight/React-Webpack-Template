@@ -14,7 +14,8 @@
 		"test": "echo 'no test'",
 		"build": "webpack build --config webpack.config.prod.ts",
 		"dev": "webpack serve --config webpack.config.development.ts",
-		"validate": "webpack configtest"
+		"validate": "webpack configtest",
+		"postbuild": "purgecss --css build/static/css/*.css --content build/index.html build/static/js/*.js --output build/static/css"
 	},
 	"browserslist": [
 		">0.2%",
@@ -28,10 +29,12 @@
 		"css-loader": "6.7.3",
 		"css-minimizer-webpack-plugin": "^5.0.0",
 		"esbuild-loader": "3.0.1",
+		"glob": "^10.2.2",
 		"html-webpack-plugin": "5.1.0",
 		"imagemin-webpack-plugin": "^2.4.2",
 		"mini-css-extract-plugin": "^2.7.5",
-		"postcss-loader": "7.1.0",
+		"postcss": "^8.4.23",
+		"postcss-loader": "^7.1.0",
 		"sass-loader": "13.2.2",
 		"style-loader": "3.3.2",
 		"ts-loader": "^9.4.2",
