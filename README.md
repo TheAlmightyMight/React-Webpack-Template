@@ -10,4 +10,3 @@
 
 ## Loaders to add
 
-- url-loader ?
