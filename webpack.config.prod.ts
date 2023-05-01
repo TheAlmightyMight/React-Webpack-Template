@@ -67,6 +67,7 @@ export default {
 		}),
 		new webpack.DefinePlugin({ MODE: JSON.stringify('production') }),
 		new BundleAnalyzerPlugin.BundleAnalyzerPlugin({ openAnalyzer: false }),
+		// ?
 		new WebpackManifestPlugin({ fileName: 'runtime' }),
 		new webpack.ProgressPlugin(),
 		new MiniCSSExtractPlugin({ filename: '[name].[contenthash].css' }),
