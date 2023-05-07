@@ -11,5 +11,5 @@
 
 ## Loaders to add
 
-- swc LOADER INSTED OF ESBUILD ONE
+- swc loader
 
