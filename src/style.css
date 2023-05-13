@@ -1,7 +1,10 @@
 p {
 	color: hsla(335deg 100% 50% 25);
+	border: 0;
 }
 
 .class {
+	display: block;
 	color: hsla(335deg 100% 50% 25);
+	border: 1rem;
 }

@@ -43,8 +43,10 @@
 		"sass-loader": "13.2.2",
 		"style-loader": "3.3.2",
 		"stylelint": "^15.6.1",
-		"stylelint-config-standard": "^33.0.0",
-		"stylelint-config-standard-scss": "^9.0.0",
+		"stylelint-config-clean-order": "^5.0.1",
+		"stylelint-config-standard": "33.0.0",
+		"stylelint-config-standard-scss": "9.0.0",
+		"stylelint-order": "6.0.3",
 		"ts-loader": "9.4.2",
 		"ts-node": "10.9.1",
 		"typescript": "5.0.4",
@@ -52,8 +54,8 @@
 		"webpack-bundle-analyzer": "4.8.0",
 		"webpack-cli": "5.0.1",
 		"webpack-dev-server": "4.13.1",
-		"webpack-manifest-plugin": "^5.0.0",
-		"webpack-nano": "^1.1.1"
+		"webpack-manifest-plugin": "5.0.0",
+		"webpack-nano": "1.1.1"
 	},
 	"dependencies": {
 		"react": "18.2.0",
