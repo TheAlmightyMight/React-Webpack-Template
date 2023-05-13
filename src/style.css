@@ -1,11 +1,7 @@
 p {
-	color: red;
+	color: hsla(335deg 100% 50% 25);
 }
 
 .class {
-	color: green;
-
-	span {
-		color: blue;
-	}
+	color: hsla(335deg 100% 50% 25);
 }
