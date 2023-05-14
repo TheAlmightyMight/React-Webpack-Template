@@ -1,3 +1,5 @@
+# React SPA template with Webpack 5
+
 ## Plugins to add
 
 - ESLint plugin
@@ -7,13 +9,4 @@
 
 ## Loaders to add
 
-// {
-// "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
-// "rules": {
-// "unit-allowed-list": ["%", "deg", "px", "rem", "em", "turn"],
-// "color-named": "never",
-// "color-no-hex": true,
-// "function-disallowed-list": ["rgb", "hwb", "lch", "hsl"],
-// "alpha-value-notation": "number"
-// }
-// }
+- none
