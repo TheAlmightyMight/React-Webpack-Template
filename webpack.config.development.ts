@@ -30,6 +30,7 @@ export default merge(Base, {
 	stats: 'normal',
 	cache: {
 		type: 'memory',
+		type: 'memory',
 	},
 	module: {
 		rules: [
