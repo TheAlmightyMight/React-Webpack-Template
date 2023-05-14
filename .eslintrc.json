@@ -5,7 +5,7 @@
 		"plugin:react-hooks/recommended",
 		"plugin:@typescript-eslint/recommended"
 	],
-	"plugins": ["react", "react-hooks", "@typescript-eslint"],
+	"plugins": ["react", "react-hooks", "@typescript-eslint", "testing-library"],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"ecmaVersion": 2021,

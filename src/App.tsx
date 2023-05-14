@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router'
 import { Example } from './components/Example'
 import './style.css'
 
-const Lazy = React.lazy(() => import('./Lazy'))
+// const Lazy = React.lazy(() => import('./Lazy'))
 export const App = () => {
 	return (
 		<Routes>
@@ -11,10 +11,10 @@ export const App = () => {
 				path='/'
 				element={<Example />}
 			/>
-			<Route
+			{/* <Route
 				path='/lazy'
 				element={<Lazy />}
-			/>
+			/> */}
 		</Routes>
 	)
 }
