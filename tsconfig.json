@@ -14,14 +14,6 @@
 		"moduleResolution": "node",
 		"baseUrl": "./",
 
-		/* not able to pick up the declarations*/
-
-		// "paths": {
-		// 	"utils/*": ["./src/utils/"]
-		// },
-
-		"moduleSuffixes": [],
-
 		"allowJs": true,
 		"checkJs": false,
 		"maxNodeModuleJsDepth": 0,

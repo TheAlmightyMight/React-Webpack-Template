@@ -5,7 +5,7 @@
 		"plugin:react-hooks/recommended",
 		"plugin:@typescript-eslint/recommended"
 	],
-	"plugins": ["react", "react-hooks", "@typescript-eslint"],
+	"plugins": ["react", "react-hooks", "@typescript-eslint", "testing-library"],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"ecmaVersion": 2021,
@@ -28,5 +28,15 @@
 		"semi": ["warn", "never"],
 		"react/display-name": "off",
 		"react/prop-types": "off"
-	}
+	},
+	"overrides": [
+		{
+			// 3) Now we enable eslint-plugin-testing-library rules or preset only for matching testing files!
+			"files": [
+				"**/__tests__/**/*.[jt]s?(x)",
+				"**/?(*.)+(spec|test).[jt]s?(x)"
+			],
+			"extends": ["plugin:testing-library/react"]
+		}
+	]
 }
