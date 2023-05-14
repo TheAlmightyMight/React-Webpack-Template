@@ -6,6 +6,6 @@ import { App } from '../App'
 describe('<App />', () => {
 	it('renders the app', () => {
 		mountWithRouter(<App />)
-		expect(screen.getByText('Hello')).toBe('')
+		expect(screen.getByText('Hello')).toBeInTheDocument()
 	})
 })
