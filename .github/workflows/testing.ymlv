@@ -19,7 +19,14 @@ jobs:
           cache: npm
       - name: Install
         run: npm install
+<<<<<<< HEAD:.github/workflows/testing.yml
       - name: Lint TS
-        run: cd node_modules && ls
-      # - name: Lint CSS
-      #   run: ls && pwd && npm run lint:css
+        run: npx lint:ts
+      - name: Lint CSS
+        run: ls && pwd && npm run lint:css
+=======
+#     - name: Lint CSS
+#       run: ls && pwd && npm run lint:css
+      - name: Lint ESLint
+        run: npx lint:ts
+>>>>>>> 5192be1c2ed93d8f7ae35ff7ee340a92601652a4:.github/workflows/testing.ymlv
