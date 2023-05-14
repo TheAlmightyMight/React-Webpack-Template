@@ -20,6 +20,6 @@ jobs:
       - name: Install
         run: npm install
       - name: Lint TS
-        run: cd node_modules && ls
+        run: cd node_modules && ls -la && cd bin && ls -la
       # - name: Lint CSS
       #   run: ls && pwd && npm run lint:css
