@@ -10,3 +10,5 @@
 ## Loaders to add
 
 - none
+
+add husky
