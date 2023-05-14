@@ -22,4 +22,4 @@ jobs:
 #       - name: Lint CSS
 #         run: ls && pwd && npm run lint:css
       - name: Lint ESLint
-        run: ./node_modules/.bin/stylelint --fix --color --cache --max-warnings=0 --quiet-deprecation-warnings \"**/*.css\"
+        run: npx lint:ts
