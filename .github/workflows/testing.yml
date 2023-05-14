@@ -19,7 +19,7 @@ jobs:
           cache: npm
       - name: Install
         run: npm install
+      - name: Lint TS
+        run: npx lint:ts
       - name: Lint CSS
         run: ls && pwd && npm run lint:css
-      - name: Lint ESLint
-        run: npm run lint:ts
