@@ -1,7 +1,6 @@
 import * as webpack from 'webpack'
 // import * as path from 'node:path'
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 const devServer: DevServerConfiguration = {
 	port: 8080,
@@ -21,22 +20,15 @@ const devServer: DevServerConfiguration = {
 
 export default {
 	mode: 'development',
-	target: 'web',
-	entry: './src/index.tsx',
 	devtool: 'source-map',
 	performance: false,
 	devServer,
 	stats: 'normal',
 	cache: {
-		type: 'filesystem',
-		name: 'DevCache',
-		maxAge: 604800000,
-		compression: 'brotli',
+		type: 'memory',
 	},
 	module: {
 		rules: [
-			// https://webpack.js.org/guides/asset-modules/
-			{ test: /\.svg/, type: 'asset/inline' },
 			{
 				test: /\.css$/,
 				use: [
@@ -55,19 +47,7 @@ export default {
 			},
 		],
 	},
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: './src/public/index.html',
-			title: 'Webpack template',
-			filename: 'index.html',
-			favicon: './src/images/React-icon.png',
-			cache: true,
-		}),
-		new webpack.DefinePlugin({ MODE: JSON.stringify('development') }),
-	],
-	resolve: {
-		extensions: ['.ts', '.tsx', '...'],
-	},
+	plugins: [new webpack.DefinePlugin({ MODE: JSON.stringify('development') })],
 	watchOptions: {
 		ignored: '**/node_modules',
 	},

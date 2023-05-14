@@ -1,29 +1,23 @@
 import * as webpack from 'webpack'
-import * as path from 'node:path'
+// import * as path from 'node:path'
 import MiniCSSExtractPlugin from 'mini-css-extract-plugin'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import CSSminimizer from 'css-minimizer-webpack-plugin'
-import BundleAnalyzerPlugin from 'webpack-bundle-analyzer'
 import { WebpackManifestPlugin } from 'webpack-manifest-plugin'
+import CSSminimizer from 'css-minimizer-webpack-plugin'
 
-export default {
+import { merge } from 'webpack-merge'
+import Base from './webpack.config.base'
+
+export default merge(Base, {
 	mode: 'production',
-	target: 'web',
-	entry: './src/index.tsx',
-	stats: 'verbose',
-	devtool: false,
+	stats: 'detailed',
 	cache: {
 		type: 'filesystem',
 		name: 'ProdCache',
 		maxAge: 1000 * 60 * 60 * 24 * 2,
-		compression: 'gzip',
-	},
-	performance: {
-		hints: 'warning',
+		compression: false,
 	},
 	optimization: {
 		minimizer: [new CSSminimizer()],
-
 		splitChunks: {
 			cacheGroups: {
 				vendor: {
@@ -32,13 +26,19 @@ export default {
 					chunks: 'all',
 				},
 				runtimeChunk: { name: 'runtime' },
+				main: {
+					name: 'main',
+					chunks: 'initial',
+				},
+				lazy: {
+					name: 'lazy',
+					chunks: 'async',
+				},
 			},
 		},
 	},
 	module: {
 		rules: [
-			// https://webpack.js.org/guides/asset-modules/
-			{ test: /\.svg/, type: 'asset/inline' },
 			{
 				test: /\.css$/,
 				use: [
@@ -58,27 +58,9 @@ export default {
 		],
 	},
 	plugins: [
-		new HtmlWebpackPlugin({
-			template: './src/public/index.html',
-			title: 'Webpack template',
-			filename: 'index.html',
-			favicon: './src/images/React-icon.png',
-			cache: true,
-		}),
 		new webpack.DefinePlugin({ MODE: JSON.stringify('production') }),
-		new BundleAnalyzerPlugin.BundleAnalyzerPlugin({ openAnalyzer: false }),
-		// ?
 		new WebpackManifestPlugin({ fileName: 'runtime' }),
 		new webpack.ProgressPlugin(),
 		new MiniCSSExtractPlugin({ filename: '[name].[contenthash].css' }),
 	],
-	output: {
-		filename: '[name].[contenthash].js',
-		asyncChunks: true,
-		path: path.resolve(__dirname, 'dist'),
-		clean: true,
-	},
-	resolve: {
-		extensions: ['.tsx', '.ts', '...'],
-	},
-} as webpack.Configuration
+} as webpack.Configuration)
