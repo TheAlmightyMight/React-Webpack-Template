@@ -18,7 +18,7 @@ jobs:
           node-version: 18.12.1
           cache: npm
       - name: Install
-        run: npm ci
+        run: npm install
       - name: Lint CSS
         run: npm run lint:css
       - name: Lint ESLint
