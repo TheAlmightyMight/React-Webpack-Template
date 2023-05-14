@@ -17,9 +17,11 @@ jobs:
         with:
           node-version: 18.12.1
           cache: npm
+      - name: Add node_modules bin to PATH
+        run: export PATH="./node_modules/.bin:$PATH"
       - name: Install
-        run: npm install && npm i -g stylelint
-      # - name: Lint TS
-      #   run: cd node_modules && ls -la && cd bin && ls -la
+        run: npm ci
       - name: Lint CSS
-        run: ls && pwd && npm run lint:css
+        run: npm run lint:css
+      - name: Lint CSS
+        run: npm run lint:ts
