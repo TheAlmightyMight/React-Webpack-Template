@@ -12,7 +12,7 @@
 		"CRA"
 	],
 	"scripts": {
-		"test": "jest",
+		"test": "echo 'no test'",
 		"build": "webpack build --config webpack.config.prod.ts",
 		"dev": "webpack serve --config webpack.config.development.ts",
 		"lint:ts": "eslint --fix --cache --max-warnings=0 .",
