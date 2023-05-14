@@ -18,8 +18,8 @@ jobs:
           node-version: 18.12.1
           cache: npm
       - name: Install
-        run: npm install
-      - name: Lint TS
-        run: cd node_modules && ls -la && cd bin && ls -la
-      # - name: Lint CSS
-      #   run: ls && pwd && npm run lint:css
+        run: npm install && npm i -g stylelint
+      # - name: Lint TS
+      #   run: cd node_modules && ls -la && cd bin && ls -la
+      - name: Lint CSS
+        run: ls && pwd && npm run lint:css
