@@ -1,6 +1,7 @@
 import * as webpack from 'webpack'
 // import * as path from 'node:path'
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 
 import { merge } from 'webpack-merge'
 import Base from './webpack.config.base'
@@ -50,8 +51,17 @@ export default merge(Base, {
 			},
 		],
 	},
-	plugins: [new webpack.DefinePlugin({ MODE: JSON.stringify('development') })],
+	plugins: [
+		new webpack.DefinePlugin({ MODE: JSON.stringify('development') }),
+		new ForkTsCheckerWebpackPlugin(),
+	],
 	watchOptions: {
-		ignored: '**/node_modules',
+		ignored: [
+			'node_modules/**',
+			'dist/**',
+			'coverage/**',
+			'cypress/**',
+			'__tests__/**',
+		],
 	},
 } as webpack.Configuration)

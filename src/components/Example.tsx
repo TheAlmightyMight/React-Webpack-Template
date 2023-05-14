@@ -1,6 +1,12 @@
-import React from 'react'
-import { sum } from '../utils/sum'
+import React, { useState } from 'react'
 
 export const Example: React.FC = () => {
-	return <div className='class'>Example dummy {sum(2, 2)}</div>
+	const [count, setCount] = useState(0)
+
+	return (
+		<div className='class'>
+			<p onClick={() => setCount(prev => prev + 1)}>Count: {count}</p>
+			Example component <span>Hello</span>
+		</div>
+	)
 }

@@ -35,7 +35,7 @@ export default {
 		filename: '[name].[contenthash].js',
 		asyncChunks: true,
 		path: path.resolve(__dirname, 'dist'),
-		clean: false,
+		clean: true,
 	},
 	resolve: {
 		extensions: ['.tsx', '.ts', '...'],

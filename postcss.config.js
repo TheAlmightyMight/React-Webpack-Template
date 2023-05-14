@@ -1,10 +1,7 @@
-const postcssPresetEnv = require('postcss-preset-env')
-const autoPrefixer = require('autoprefixer')
-const atImport = require('postcss-import')
-const nested = require('postcss-nested')
-// const purgecss = require('@fullhuman/postcss-purgecss')
-// const glob = require('glob')
+// import postcssPresetEnv from 'postcss-preset-env'
+// import nested from 'postcss-nested'
+import autoPrefixer from 'autoprefixer'
 
-module.exports = {
-	plugins: [postcssPresetEnv(), autoPrefixer(), atImport(), nested()],
+export default {
+	plugins: [autoPrefixer()],
 }
