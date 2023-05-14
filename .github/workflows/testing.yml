@@ -20,6 +20,6 @@ jobs:
       - name: Install
         run: npm install
       - name: Lint CSS
-        run: npm run lint:css
+        run: ls && pwd && npm run lint:css
       - name: Lint ESLint
         run: npm run lint:ts
