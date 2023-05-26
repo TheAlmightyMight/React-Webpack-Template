@@ -44,7 +44,7 @@
 
 		"skipDefaultLibCheck": true,
 		"skipLibCheck": true,
-		"types": ["@types/aria-query"]
+		"types": ["@types/aria-query", "jest", "@testing-library/jest-dom"]
 	},
 
 	"include": ["./src"],

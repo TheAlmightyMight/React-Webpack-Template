@@ -12,3 +12,4 @@
 - none
 
 add husky
+setup redux base

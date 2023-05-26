@@ -1,5 +1,4 @@
 import * as webpack from 'webpack'
-// import * as path from 'node:path'
 import MiniCSSExtractPlugin from 'mini-css-extract-plugin'
 import { WebpackManifestPlugin } from 'webpack-manifest-plugin'
 import CSSminimizer from 'css-minimizer-webpack-plugin'
