@@ -30,6 +30,7 @@ export default {
 			cache: true,
 		}),
 		new BundleAnalyzerPlugin.BundleAnalyzerPlugin({ openAnalyzer: false }),
+		new webpack.ProvidePlugin({ React: 'react' }),
 	],
 	output: {
 		filename: '[name].[contenthash].js',
