@@ -5,7 +5,6 @@
 - ESLint plugin
 - StyleLint plugin
 - PurgeCSS plugin
-- fork-ts-checker-webpack-plugin
 
 ## Loaders to add
 
