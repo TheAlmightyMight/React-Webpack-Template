@@ -14,10 +14,10 @@ export default {
 	},
 	module: {
 		rules: [
-			{ test: /\.svg/, type: 'asset/inline' }, // https://webpack.js.org/guides/asset-modules/
+			{ test: /\.svg/, type: 'asset/inline' },
 			{
-				test: /\.(png|jpe?g|gif|woff|woff2?|eot|ttf|otf|webp|avif)$/i, // Matches any of the specified file types
-				type: 'asset/resource', // Uses the asset modules to emit the file as a separate asset instead of inlining it
+				test: /\.(png|jpe?g|gif|woff|woff2?|eot|ttf|otf|webp|avif)$/i,
+				type: 'asset/resource',
 			},
 		],
 	},

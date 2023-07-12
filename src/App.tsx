@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
 import { Counter } from './components/Counter'
-import './style.css'
+import './styles/main.scss'
 
 export const App = () => {
 	return (

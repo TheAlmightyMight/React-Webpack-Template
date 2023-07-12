@@ -16,7 +16,6 @@ const devServer: DevServerConfiguration = {
 	},
 	proxy: {},
 	open: true,
-	https: true,
 	http2: true,
 	compress: true,
 }
@@ -38,8 +37,20 @@ export default merge(Base, {
 					'style-loader',
 					{
 						loader: 'css-loader',
-						options: { sourceMap: true },
+						options: { sourceMap: true, modules: true },
 					},
+					'postcss-loader',
+				],
+			},
+			{
+				test: /\.s[ac]ss$/i,
+				use: [
+					'style-loader',
+					{
+						loader: 'css-loader',
+						options: { sourceMap: true, modules: true },
+					},
+					{ loader: 'sass-loader', options: { sourceMap: true } },
 					'postcss-loader',
 				],
 			},

@@ -44,8 +44,21 @@ export default merge(Base, {
 					MiniCSSExtractPlugin.loader,
 					{
 						loader: 'css-loader',
-						options: { sourceMap: true },
+						options: { sourceMap: false, modules: true },
 					},
+					'postcss-loader',
+					{ loader: 'sass-loader', options: { sourceMap: true } },
+				],
+			},
+			{
+				test: /\.s[ac]ss$/i,
+				use: [
+					MiniCSSExtractPlugin.loader,
+					{
+						loader: 'css-loader',
+						options: { sourceMap: true, modules: true },
+					},
+					{ loader: 'sass-loader', options: { sourceMap: true } },
 					'postcss-loader',
 				],
 			},
