@@ -55,12 +55,6 @@ export default merge(Base, {
 		new ForkTsCheckerWebpackPlugin(),
 	],
 	watchOptions: {
-		ignored: [
-			'node_modules/**',
-			'dist/**',
-			'coverage/**',
-			'cypress/**',
-			'__tests__/**',
-		],
+		ignored: ['node_modules/**', 'dist/**', 'coverage/**', 'cypress/**', '__tests__/**'],
 	},
 } as webpack.Configuration)

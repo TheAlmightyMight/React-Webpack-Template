@@ -16,7 +16,8 @@
 		"dev": "webpack serve --config webpack.config.development.ts",
 		"lint:ts": "eslint --fix --cache --max-warnings=0 .",
 		"lint:css": "stylelint --fix --color --cache --max-warnings=0 --quiet-deprecation-warnings \"**/*.css\"",
-		"validate": "webpack configtest"
+		"validate": "webpack configtest",
+		"format": "prettier --check -w --cache ."
 	},
 	"browserslist": [
 		">0.2%",
@@ -40,6 +41,7 @@
 		"css-minimizer-webpack-plugin": "5.0.0",
 		"esbuild-loader": "3.0.1",
 		"eslint": "8.40.0",
+		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-jest-dom": "4.0.3",
 		"eslint-plugin-react": "7.32.2",
 		"eslint-plugin-react-hooks": "4.6.0",
@@ -57,6 +59,7 @@
 		"postcss-loader": "7.1.0",
 		"postcss-nested": "6.0.1",
 		"postcss-preset-env": "8.3.2",
+		"prettier": "3.0.0",
 		"sass-loader": "13.2.2",
 		"style-loader": "3.3.2",
 		"stylelint": "15.6.1",

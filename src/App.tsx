@@ -6,10 +6,7 @@ import './style.css'
 export const App = () => {
 	return (
 		<Routes>
-			<Route
-				path='/'
-				element={<Counter />}
-			/>
+			<Route path='/' element={<Counter />} />
 		</Routes>
 	)
 }
