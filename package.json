@@ -15,7 +15,7 @@
 		"build": "webpack build --config webpack.config.prod.ts",
 		"dev": "webpack serve --config webpack.config.development.ts",
 		"lint:ts": "eslint --fix --cache --max-warnings=0 .",
-		"lint:css": "stylelint --fix --color --cache --max-warnings=0 --quiet-deprecation-warnings \"**/*.css\"",
+		"lint:css": "stylelint --fix --color --cache --max-warnings=0 --quiet-deprecation-warnings \"**/*.{scss,css}\"",
 		"validate": "webpack configtest",
 		"format": "prettier --check -w --cache ."
 	},
@@ -68,6 +68,7 @@
 		"stylelint-config-standard": "33.0.0",
 		"stylelint-config-standard-scss": "9.0.0",
 		"stylelint-order": "6.0.3",
+		"stylelint-scss": "^5.0.1",
 		"ts-jest": "29.1.0",
 		"ts-loader": "9.4.2",
 		"ts-node": "10.9.1",
