@@ -2,7 +2,8 @@
 
 ## Todo:
 
--   ESLint plugin
 -   StyleLint plugin
 -   PurgeCSS plugin
 -   Add husky
+-   CompressionWebpackPlugin
+-   ImageMinimizerWebpackPlugin

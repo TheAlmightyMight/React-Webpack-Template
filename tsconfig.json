@@ -7,7 +7,7 @@
 		"target": "ES5",
 		"lib": ["dom", "ESNext"],
 		"experimentalDecorators": true,
-		"jsx": "react",
+		"jsx": "react-jsx",
 
 		"module": "ESNext",
 		"rootDir": ".",

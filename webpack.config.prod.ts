@@ -2,6 +2,7 @@ import * as webpack from 'webpack'
 import MiniCSSExtractPlugin from 'mini-css-extract-plugin'
 import { WebpackManifestPlugin } from 'webpack-manifest-plugin'
 import CSSminimizer from 'css-minimizer-webpack-plugin'
+import HtmlMinimizerPlugin from 'html-minimizer-webpack-plugin'
 
 import { merge } from 'webpack-merge'
 import Base from './webpack.config.base'
@@ -74,5 +75,6 @@ export default merge(Base, {
 		new WebpackManifestPlugin({ fileName: 'runtime' }),
 		new webpack.ProgressPlugin(),
 		new MiniCSSExtractPlugin({ filename: '[name].[contenthash].css' }),
+		new HtmlMinimizerPlugin({ minify: HtmlMinimizerPlugin.swcMinify }),
 	],
 } as webpack.Configuration)

@@ -26,6 +26,7 @@
 	],
 	"devDependencies": {
 		"@fullhuman/postcss-purgecss": "5.0.0",
+		"@swc/html": "^0.0.26",
 		"@testing-library/jest-dom": "5.16.5",
 		"@testing-library/react": "14.0.0",
 		"@types/aria-query": "5.0.1",
@@ -48,6 +49,7 @@
 		"eslint-plugin-testing-library": "5.11.0",
 		"fork-ts-checker-webpack-plugin": "8.0.0",
 		"glob": "10.2.2",
+		"html-minimizer-webpack-plugin": "^4.4.0",
 		"html-webpack-plugin": "5.1.0",
 		"identity-obj-proxy": "3.0.0",
 		"imagemin-webpack-plugin": "2.4.2",
