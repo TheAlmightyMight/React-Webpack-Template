@@ -16,8 +16,9 @@
 		"dev": "webpack serve --config webpack.config.development.ts",
 		"lint:ts": "eslint --fix --cache --max-warnings=0 .",
 		"lint:css": "stylelint --fix --color --cache --max-warnings=0 --quiet-deprecation-warnings \"**/*.{scss,css}\"",
-		"validate": "webpack configtest",
-		"format": "prettier --check -w --cache ."
+		"webpack:validate": "webpack configtest",
+		"format": "prettier --check -w --cache .",
+		"prepare": "husky install"
 	},
 	"browserslist": [
 		">0.2%",
@@ -81,7 +82,8 @@
 		"webpack-dev-server": "4.13.1",
 		"webpack-manifest-plugin": "5.0.0",
 		"webpack-merge": "5.8.0",
-		"webpack-nano": "1.1.1"
+		"webpack-nano": "1.1.1",
+		"husky": "^8.0.0"
 	},
 	"dependencies": {
 		"@types/eslint": "8.40.0",
