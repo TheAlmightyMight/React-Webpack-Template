@@ -7,6 +7,7 @@
 -   Add husky
 -   CompressionWebpackPlugin
 -   ImageMinimizerWebpackPlugin
+-   Classnames
 
 ## Available scripts
 
