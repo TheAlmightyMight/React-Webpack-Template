@@ -8,6 +8,8 @@
 -   CompressionWebpackPlugin
 -   ImageMinimizerWebpackPlugin
 -   Classnames
+-   Move webpack configs to separate folder
+-   Add tests to ci config
 
 ## Available scripts
 
