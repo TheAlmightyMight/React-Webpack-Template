@@ -1,13 +1,10 @@
 # React SPA template with Webpack 5
 
 ## Todo:
-
--   StyleLint plugin
 -   PurgeCSS plugin
--   Add husky
 -   CompressionWebpackPlugin
 -   ImageMinimizerWebpackPlugin
--   Classnames
+-   Add classnames library
 -   Move webpack configs to separate folder
 -   Add tests to ci config
 
